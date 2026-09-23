@@ -1,10 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Helping Hands</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f7f9fc;
+  color:#222;
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,#1769aa,#43a047);
+  color:white;
+  padding:45px 20px;
+  text-align:center;
+}
+header h1{font-size:42px;margin:0 0 8px}
+header p{font-size:20px;margin:0}
+nav{
+  background:white;
+  padding:12px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 8px #ccc;
+}
+nav a{
+  margin:0 10px;
+  color:#1769aa;
+  text-decoration:none;
+  font-weight:bold;
+}
+.language{
+  position:absolute;
+  right:12px;
+  top:10px;
+}
+.language select{
+  padding:7px;
+  border-radius:8px;
+  border:1px solid #aaa;
+}
+section{
+  max-width:950px;
+  margin:30px auto;
+  padding:30px 22px;
+  background:white;
+  border-radius:16px;
+  box-shadow:0 3px 15px #ddd;
+}
+h2{
+  color:#1769aa;
+  text-align:center;
+}
+.hero{
+  text-align:center;
+}
+.hero h2{font-size:30px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+.card{
+  padding:20px;
+  background:#f1f7ff;
+  border-radius:14px;
+  text-align:center;
+}
+.card h3{color:#1769aa}
+.quote{
+  text-align:center;
+  font-size:21px;
+  font-style:italic;
+  padding:25px;
+}
+.donate{
+  text-align:center;
+}
+.donate-box{
+  display:inline-block;
+  padding:25px;
+  background:#f5fff5;
+  border:2px solid #43a047;
+  border-radius:15px;
+}
+.email{
+  color:#1769aa;
+  font-weight:bold;
+  word-break:break-word;
+}
+footer{
+  background:#17202a;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  margin-top:40px;
+}
+button{
+  background:#43a047;
+  color:white;
+  border:0;
+  padding:12px 25px;
+  border-radius:8px;
+  font-size:16px;
+}
+</style>
 </head>
+
 <body>
-<h1>Helping Hands</h1>
-<p>जीवन जीने की कला</p>
-</body>
-</html>
+
+<header>
+  <div class="language">
+    <select onchange="changeLanguage(this.value)">
+      <option value="en">Language</option>
+      <option value="hi">हिन्दी</option>
+      <option value="mr">मराठी</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <h1>Helping Hands</h1>
+  <p>सहयोग • सेवा • मानवता</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#help">How We Help</a>
+  <a href="#about">About</a>
+  <a href="#donate">Donate</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+  <h2>जीवन जीने की कला</h2>
+  <p>
+    Helping Hands एक मानवीय पहल है, जिसका उद्देश्य जरूरतमंद लोगों के साथ
+    खड़ा होना और उन्हें अपने जीवन में आगे बढ़ने के लिए सहयोग देना है।
+  </p>
+  <p>
+    हमारा विश्वास है कि किसी एक व्यक्ति की समस्या भी यदि कम हो सके,
+    तो वह प्रयास सार्थक है।
+  </p>
+</section>
+
+<section id="help">
+  <h2>हम किन लोगों की सहायता करना चाहते हैं?</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>बाढ़ प्रभावित लोग</h3>
+      <p>प्राकृतिक आपदा से प्रभावित परिवारों तक सहायता पहुँचाने का प्रयास।</p>
+    </div>
+
+    <div class="card">
+      <h3>जरूरतमंद लोग</h3>
+      <p>कठिन परिस्थितियों में जीवन जी रहे लोगों के लिए सहयोग।</p>
+    </div>
+
+    <div class="card">
+      <h3>कर्ज से परेशान लोग</h3>
+      <p>मानसिक और व्यावहारिक स्तर पर सही दिशा और सहयोग देने का प्रयास।</p>
+    </div>
+
+    <div class="card">
+      <h3>नशे से परेशान लोग</h3>
+      <p>चिकित्सकीय उपचार के बाद मानसिक मजबूती और जीवन में वापसी के लिए सहयोग।</p>
+    </div>
+
+    <div class="card">
+      <h3>नया व्यवसाय शुरू करने वाले</h3>
+      <p>साधनों की कमी से जूझ रहे लोगों को आगे बढ़ने में सहयोग देने का प्रयास।</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2>हमारे बारे में</h2>
+
+  <p>
+    गहन आध्यात्मिक अध्ययन और जीवन के अनुभवों से यह समझ विकसित हुई कि
+    मनुष्य के जीवन में मानसिक शांति, सही समझ और सकारात्मक दिशा का बहुत
+    महत्व है।
+  </p>
+
+  <p>
+    Helping Hands इसी सोच के साथ लोगों तक सरल भाषा में जीवन जीने की कला,
+    मानसिक मजबूती और मानवता आधारित सहयोग पहुँचाने का एक प्रयास है।
+  </p>
+
+  <div class="quote">
+    “यदि हमारे प्रयास से किसी एक इंसान की समस्या भी कम हो जाए,
+    तो यही हमारे लिए बहुत बड़ी उपलब्धि है।”
+  </div>
+</section>
+
+<section>
+  <h2>नशे से बाहर आने में सहयोग</h2>
+
+  <p>
+    नशे की गंभीर स्थिति में सबसे पहले योग्य डॉक्टर और अस्पताल से
+    चिकित्सकीय सहायता लेना आवश्यक है। इसके बाद व्यक्ति को मानसिक
+    मजबूती, सही वातावरण और निरंतर सहयोग की आवश्यकता हो सकती है।
+  </p>
+
+  <p>
+    Helping Hands भविष्य में ऐसे लोगों के लिए सहयोग की एक व्यवस्था
+    विकसित करना चाहता है, ताकि वे अपने जीवन को दोबारा व्यवस्थित कर सकें।
+  </p>
+</section>
+
+<section id="donate" class="donate">
+  <h2>सहयोग करें</h2>
+
+  <p>
+    आप आर्थिक सहयोग के साथ-साथ अपना समय, श्रम और अनुभव देकर भी
+    Helping Hands के प्रयास में सहभागी बन सकते हैं।
+  </p>
+
+  <div class="donate-box">
+    <h3>Donation</h3>
+    <p>Donation सुविधा जल्द उपलब्ध कराई जाएगी।</p>
+    <p>आपका छोटा सा सहयोग भी किसी के जीवन में बदलाव ला सकता है।</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>संपर्क करें</h2>
+
+  <p style="text-align:center">
+    किसी सहायता, सुझाव या सहयोग के लिए हमें ईमेल करें:
+  </p>
+
+  <p style="text-align:center">
+    <span class="email">helpinandblessinghands@gmail.com</span>
+  </p>
+
+  <form style="max-width:600px;margin:auto"
+        action="mailto:helpinandblessinghands@gmail.com"
+        method="post"
+        enctype="text/plain">
+
+    <p>
+      <input type="text" name="Name" placeholder="आपका नाम"
+      style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px">
+    </p>
+
+    <p>
+      <input type="email" name="Email" placeholder="आपका ईमेल"
+      style="width:100%;padding:12px;border:1px
